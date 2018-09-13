@@ -1,10 +1,10 @@
 #include "No.h"
-
+#include <iostream>
 No::No(int info)
 {
     this->info = info;
-    this->esquerda = nullptr;
-    this->direita = nullptr;
+    this->esquerda = NULL;
+    this->direita = NULL;
 
 }
 
@@ -35,6 +35,12 @@ No* No::getEsq()
     return this->esquerda;
 }
 
+int No::getInfo()
+{
+
+    return this->info;
+}
 
 
-s
+
+

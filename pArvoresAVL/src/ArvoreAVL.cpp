@@ -1,28 +1,28 @@
 #include "ArvoreAVL.h"
-
+#include <iostream>
 ArvoreAVL::ArvoreAVL()
 {
-    this->raiz = nullptr;
+    this->raiz = NULL;
 }
 
 void ArvoreAVL::incluir(int info)
 {
-    this->incluir(info, raiz, nullptr);
+    this->incluir(info, raiz, NULL);
 }
 
 
 void ArvoreAVL::incluir(int info, No* ptr, No* pai)
 {
-    if (ptr == nullptr)
+    if (ptr == NULL)
         ptr = new No(info);
-        if (pai != nullptr)
-            if (info > pai.getDir().getInfo())
-                pai.setDir(ptr);
+        if (pai != NULL)
+            if (info > pai->getDir()->getInfo())
+                pai->setDir(ptr);
             else
-                pai.setEsq(ptr);
+                pai->setEsq(ptr);
     else
-        if (info > ptr.getInfo())
-            incluir(info, ptr.getDir(), ptr);
-        if (info < ptr.getInfo())
-            incluir(info, ptr.getEsq(), ptr);
+        if (info > ptr->getInfo())
+            incluir(info, ptr->getDir(), ptr);
+        if (info < ptr->getInfo())
+            incluir(info, ptr->getEsq(), ptr);
 }

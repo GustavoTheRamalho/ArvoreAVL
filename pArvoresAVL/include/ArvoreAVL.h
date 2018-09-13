@@ -10,7 +10,7 @@ class ArvoreAVL
 
     protected:
     private:
-        void incluir(int, No*);
+        void incluir(int, No*, No*);
         No* raiz;
 
 
