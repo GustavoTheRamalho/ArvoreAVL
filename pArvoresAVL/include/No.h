@@ -1,22 +1,24 @@
 #ifndef NO_H
 #define NO_H
 
-
+template <class T>
 class No
 {
     public:
-        No(int, No*, No*);
-        No(int);
+        No(T, No*, No*);
+        No(T);
         void setDir(No* ptr);
         void setEsq(No* ptr);
         No* getDir();
         No* getEsq();
-        int getInfo();
-        void setInfo();
+        T getInfo();
+        void setInfo(T);
+        int ehFolha();
 
     protected:
     private:
-        int info;
+        T info;
+        int equilibrio;
         No* direita;
         No* esquerda;
 

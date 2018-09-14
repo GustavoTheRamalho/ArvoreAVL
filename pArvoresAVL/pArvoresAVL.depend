@@ -1,13 +1,19 @@
 # depslib dependency file v1.0
-1536849189 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\main.cpp
+1536930405 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\main.cpp
 	<iostream>
+	"ArvoreAVL.h"
+	"No.h"
 
-1536849345 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
+1536932772 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
 	"ArvoreAVL.h"
 	<iostream>
 
-1536849297 c:\users\u16174\documents\github\arvoreavl\parvoresavl\include\arvoreavl.h
+1536934886 c:\users\u16174\documents\github\arvoreavl\parvoresavl\include\arvoreavl.h
 	"No.h"
 
-1536849189 c:\users\u16174\documents\github\arvoreavl\parvoresavl\include\no.h
+1536934249 c:\users\u16174\documents\github\arvoreavl\parvoresavl\include\no.h
+
+1536927952 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\no.cpp
+	"No.h"
+	<iostream>
 
