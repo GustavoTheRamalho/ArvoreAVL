@@ -7,13 +7,23 @@ class No
     public:
         No(T, No*, No*);
         No(T);
+        ~No();
+
         void setDir(No* ptr);
         void setEsq(No* ptr);
+        void setEquilibrio(int);
+        void setInfo(T);
+
         No* getDir();
         No* getEsq();
+        int getEquilibrio();
         T getInfo();
-        void setInfo(T);
+
         int ehFolha();
+        int estaEquilibrado();
+
+
+
 
     protected:
     private:
@@ -24,5 +34,5 @@ class No
 
 
 };
-
+#include "../src/No.cpp"
 #endif // NO_H

@@ -7,7 +7,10 @@ using namespace std;
 
 int main()
 {
-    ArvoreAVL<int> arvore();
+    ArvoreAVL<int> *arv = new ArvoreAVL<int>();
+    arv->incluir(2);
+    arv->incluir(3);
+
 
 
     cout << "Hello world!" << endl;

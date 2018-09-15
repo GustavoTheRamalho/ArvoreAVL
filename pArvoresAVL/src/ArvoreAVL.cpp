@@ -1,5 +1,9 @@
+#ifndef ARVOREAVL_CPP
+#define ARVOREAVL_CPP
+
 #include "ArvoreAVL.h"
 #include <iostream>
+
 template <class T>
 ArvoreAVL<T>::ArvoreAVL()
 {
@@ -9,7 +13,7 @@ ArvoreAVL<T>::ArvoreAVL()
 template <class T>
 void ArvoreAVL<T>::incluir(T info)
 {
-    this->incluir(info, raiz, NULL);
+    this->incluir(info, this->raiz, NULL);
 }
 
 
@@ -18,17 +22,18 @@ void ArvoreAVL<T>::incluir(T info, No<T>* ptr, No<T>* pai)
 {
     if (ptr == NULL)
         ptr = new No<T>(info);
-        if (pai != NULL)
-            if (info > pai->getDir()->getInfo())
-                pai->setDir(ptr);
-            else
-                pai->setEsq(ptr);
+    if (pai != NULL)
+        if (info > pai->getDir()->getInfo())
+            pai->setDir(ptr);
+        else
+            pai->setEsq(ptr);
     else
         if (info > ptr->getInfo())
             incluir(info, ptr->getDir(), ptr);
         if (info < ptr->getInfo())
             incluir(info, ptr->getEsq(), ptr);
 }
+
 
 template <class T>
 void ArvoreAVL<T>::remover(T info)
@@ -65,7 +70,21 @@ void ArvoreAVL<T>::remover(T info)
 }
 
 template <class T>
-void ArvoreAVL<T>::remover(T info, No<T>* ptr, No<T>* pai)
+int ArvoreAVL<T>::altura(No<T>* ptr)
 {
+    if (ptr == NULL)
+        return 0;
 
+    if (ptr->ehFolha())
+        return 1;
+    else
+        return std::max(this->altura(ptr->esquerda), this->altura(ptr->direita)) + 1;
 }
+
+#endif // ARVOREAVL_CPP
+
+
+
+
+
+

@@ -17,3 +17,32 @@
 	"No.h"
 	<iostream>
 
+1537030235 source:c:\users\carlos ramalho\documents\github\arvoreavl\parvoresavl\main.cpp
+	<iostream>
+	"ArvoreAVL.h"
+	"No.h"
+
+1537030255 c:\users\carlos ramalho\documents\github\arvoreavl\parvoresavl\include\arvoreavl.h
+	"No.h"
+	<iostream>
+	"../src/ArvoreAVL.cpp"
+
+1537030109 c:\users\carlos ramalho\documents\github\arvoreavl\parvoresavl\include\no.h
+	"../src/No.cpp"
+
+1537030042 source:c:\users\carlos ramalho\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
+	"ArvoreAVL.h"
+	<iostream>
+
+1537030182 source:c:\users\carlos ramalho\documents\github\arvoreavl\parvoresavl\src\no.cpp
+	"No.h"
+	<iostream>
+
+1537030042 c:\users\carlos ramalho\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
+	"ArvoreAVL.h"
+	<iostream>
+
+1537030182 c:\users\carlos ramalho\documents\github\arvoreavl\parvoresavl\src\no.cpp
+	"No.h"
+	<iostream>
+

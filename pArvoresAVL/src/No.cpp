@@ -1,3 +1,7 @@
+#ifndef NO_CPP
+#define NO_CPP
+
+
 #include "No.h"
 #include <iostream>
 template <class T>
@@ -15,6 +19,17 @@ No<T>::No(T info, No* esq, No* dir)
     this->esquerda = esq;
     this->direita = dir;
 }
+
+template <class T>
+No<T>::~No()
+{
+    delete this->info;
+    delete this->esquerda;
+    delete this->direita;
+
+
+}
+
 
 template <class T>
 void No<T>::setDir(No* ptr)
@@ -59,6 +74,25 @@ int No<T>::ehFolha()
     return this->esquerda == NULL && this->direita == NULL;
 }
 
+template <class T>
+int No<T>::getEquilibrio()
+{
+    return this->equilibrio;
+}
+
+template <class T>
+void No<T>::setEquilibrio(int e)
+{
+    this->equilibrio = e;
+}
+
+template <class T>
+int No<T>::estaEquilibrado()
+{
+    return this->equilibrio >= -1 && this->equilibrio <= 1;
+}
+
+#endif
 
 
 
