@@ -12,12 +12,17 @@ class ArvoreAVL
         void incluir(T info);
 
         void remover(T);
-        int altura(No<T>*);
+        int altura();
+        char* toString();
+
+
 
 
     protected:
     private:
         void incluir(T, No<T>*, No<T>*);
+        int altura(No<T>*);
+
 
 
 

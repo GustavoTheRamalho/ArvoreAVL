@@ -13,6 +13,9 @@ ArvoreAVL<T>::ArvoreAVL()
 template <class T>
 void ArvoreAVL<T>::incluir(T info)
 {
+    if (this->raiz == NULL)
+
+
     this->incluir(info, this->raiz, NULL);
 }
 
@@ -21,9 +24,13 @@ template <class T>
 void ArvoreAVL<T>::incluir(T info, No<T>* ptr, No<T>* pai)
 {
     if (ptr == NULL)
+    {
         ptr = new No<T>(info);
+        if (this->raiz == NULL)
+            this->raiz = ptr;
+    }
     if (pai != NULL)
-        if (info > pai->getDir()->getInfo())
+        if (info > pai->getInfo())
             pai->setDir(ptr);
         else
             pai->setEsq(ptr);
@@ -33,6 +40,7 @@ void ArvoreAVL<T>::incluir(T info, No<T>* ptr, No<T>* pai)
         if (info < ptr->getInfo())
             incluir(info, ptr->getEsq(), ptr);
 }
+
 
 
 template <class T>
@@ -69,6 +77,14 @@ void ArvoreAVL<T>::remover(T info)
     }
 }
 
+
+
+template <class T>
+int ArvoreAVL<T>::altura()
+{
+    return this->altura(this->raiz);
+}
+
 template <class T>
 int ArvoreAVL<T>::altura(No<T>* ptr)
 {
@@ -77,9 +93,20 @@ int ArvoreAVL<T>::altura(No<T>* ptr)
 
     if (ptr->ehFolha())
         return 1;
-    else
-        return std::max(this->altura(ptr->esquerda), this->altura(ptr->direita)) + 1;
+
+    return std::max(this->altura(ptr->getEsq()), this->altura(ptr->getDir())) + 1;
 }
+
+template <class T>
+char ArvoreAVL<T>::*toString()
+{
+
+
+}
+
+
+
+
 
 #endif // ARVOREAVL_CPP
 

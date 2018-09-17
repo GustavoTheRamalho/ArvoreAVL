@@ -26,8 +26,6 @@ No<T>::~No()
     delete this->info;
     delete this->esquerda;
     delete this->direita;
-
-
 }
 
 
@@ -58,7 +56,6 @@ No<T>* No<T>::getEsq()
 template <class T>
 T No<T>::getInfo()
 {
-
     return this->info;
 }
 
@@ -71,7 +68,8 @@ void No<T>::setInfo(T info)
 template <class T>
 int No<T>::ehFolha()
 {
-    return this->esquerda == NULL && this->direita == NULL;
+
+    return  this->esquerda == NULL && this->direita == NULL;
 }
 
 template <class T>
