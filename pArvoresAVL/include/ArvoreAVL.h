@@ -22,9 +22,10 @@ class ArvoreAVL
     private:
         void incluir(T, No<T>*, No<T>*);
         int altura(No<T>*);
+        No<T> *menorDaDireita();
 
-
-
+        T getMaior(No<T> *ptr);
+        T getMenor(No<T> *ptr);
 
         No<T>* raiz;
 

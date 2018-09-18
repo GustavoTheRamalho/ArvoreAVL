@@ -23,7 +23,7 @@ No<T>::No(T info, No* esq, No* dir)
 template <class T>
 No<T>::~No()
 {
-    delete this->info;
+    this->info = NULL;
     delete this->esquerda;
     delete this->direita;
 }

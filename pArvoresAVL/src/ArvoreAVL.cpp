@@ -3,6 +3,7 @@
 
 #include "ArvoreAVL.h"
 #include <iostream>
+#include <string.h>
 
 template <class T>
 ArvoreAVL<T>::ArvoreAVL()
@@ -13,32 +14,29 @@ ArvoreAVL<T>::ArvoreAVL()
 template <class T>
 void ArvoreAVL<T>::incluir(T info)
 {
+    No<T>* novo = new No<T>(info);
+
     if (this->raiz == NULL)
-
-
-    this->incluir(info, this->raiz, NULL);
-}
-
-
-template <class T>
-void ArvoreAVL<T>::incluir(T info, No<T>* ptr, No<T>* pai)
-{
-    if (ptr == NULL)
-    {
-        ptr = new No<T>(info);
-        if (this->raiz == NULL)
-            this->raiz = ptr;
-    }
-    if (pai != NULL)
-        if (info > pai->getInfo())
-            pai->setDir(ptr);
-        else
-            pai->setEsq(ptr);
+        this->raiz = novo;
     else
-        if (info > ptr->getInfo())
-            incluir(info, ptr->getDir(), ptr);
-        if (info < ptr->getInfo())
-            incluir(info, ptr->getEsq(), ptr);
+    {
+        No<T>* atual = this->raiz;
+        No<T>* anterior = NULL;
+        while(atual != NULL)
+        {
+            anterior = atual;
+            if (novo->getInfo() > atual->getInfo())
+                atual = atual->getDir();
+            else
+                atual = atual->getEsq();
+        }
+
+        if (novo->getInfo() > anterior->getInfo())
+            anterior->setDir(novo);
+        else
+        if (novo->getInfo() < anterior->getInfo())
+            anterior->setEsq(novo);
+    }
 }
 
 
@@ -54,9 +52,9 @@ void ArvoreAVL<T>::remover(T info)
         anterior = atual;
 
         if (info > atual->getInfo())
-            atual = atual->direita;
+            atual = atual->getDir();
         else
-            atual = atual->esquerda;
+            atual = atual->getEsq();
     }
 
     if (atual == NULL)
@@ -64,18 +62,36 @@ void ArvoreAVL<T>::remover(T info)
 
     if (atual->ehFolha())
     {
-        if (anterior->getEsquerda == atual)
-            anterior->setEsquerda(NULL);
+        if (anterior->getEsq() == atual)
+            anterior->setEsq(NULL);
         else
-            anterior->setDireita(NULL);
+            anterior->setDir(NULL);
 
         delete atual;
     }
     else
     {
-    //continua aq
+        int esq = this->altura(atual->getEsq());
+        int dir = this->altura(atual->getDir());
+
+        if (esq > dir)
+        {
+            int maior = this->getMaior(atual->getEsq());
+            this->remover(maior);
+            atual->setInfo(maior);
+        }
+        else
+        {
+            int menor = this->getMenor(atual->getDir());
+            this->remover(menor);
+            atual->setInfo(menor);
+        }
+
+
     }
 }
+
+
 
 
 
@@ -100,11 +116,42 @@ int ArvoreAVL<T>::altura(No<T>* ptr)
 template <class T>
 char ArvoreAVL<T>::*toString()
 {
-
+    char buffer* ret = new char[100];
+    strc
 
 }
 
 
+template <class T>
+T ArvoreAVL<T>::getMaior(No<T>* ptr)
+{
+    No<T>* atual = ptr;
+    No<T>* anterior = NULL;
+
+    while (atual != NULL)
+    {
+        anterior = atual;
+        atual = atual->getDir();
+    }
+
+    return anterior->getInfo();
+}
+
+
+template <class T>
+T ArvoreAVL<T>::getMenor(No<T>* ptr)
+{
+    No<T>* atual = ptr;
+    No<T>* anterior = NULL;
+
+    while (atual != NULL)
+    {
+        anterior = atual;
+        atual = atual->getEsq();
+    }
+
+    return anterior->getInfo();
+}
 
 
 
