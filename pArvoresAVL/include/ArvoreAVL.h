@@ -27,6 +27,9 @@ class ArvoreAVL
         T getMaior(No<T> *ptr);
         T getMenor(No<T> *ptr);
 
+        char* toString(No<T>*);
+
+
         No<T>* raiz;
 
 

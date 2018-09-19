@@ -4,6 +4,9 @@
 
 #include "No.h"
 #include <iostream>
+#include <string.h>
+#include <stdio.h>
+
 template <class T>
 No<T>::No(T info)
 {
@@ -89,6 +92,23 @@ int No<T>::estaEquilibrado()
 {
     return this->equilibrio >= -1 && this->equilibrio <= 1;
 }
+
+
+template <class T>
+ostream& operator<<(ostream& out, const No<T>& no)
+{
+
+}
+
+template <class T>
+char* No<T>::toString()
+{
+    char* ret = new char[10];
+    strcpy(ret, "");
+    sprintf(ret, "%d", this->info);
+    return ret;
+}
+
 
 #endif
 

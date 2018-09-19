@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    ArvoreAVL<int> *arv = new ArvoreAVL<int>();
+    /*ArvoreAVL<int> *arv = new ArvoreAVL<int>();
 
 
     arv->incluir(2);
@@ -16,10 +16,13 @@ int main()
     arv->incluir(4);
     arv->remover(2);
 
-    cout << arv->altura() << endl;
+
+    cout << arv->altura() << endl;*/
+    No<int> *no = new No<int>(2);
 
 
 
-    cout << "Hello world!" << endl;
+
+    cout << no->toString() << endl;
     return 0;
 }

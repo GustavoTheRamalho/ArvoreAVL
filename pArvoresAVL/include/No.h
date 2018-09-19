@@ -1,6 +1,9 @@
 #ifndef NO_H
 #define NO_H
 
+#include <iostream>
+using namespace std;
+
 template <class T>
 class No
 {
@@ -21,6 +24,10 @@ class No
 
         int ehFolha();
         int estaEquilibrado();
+
+        char* toString();
+
+        friend ostream &operator<<(ostream& out, const No<T>& no);
 
 
 

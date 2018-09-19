@@ -114,12 +114,21 @@ int ArvoreAVL<T>::altura(No<T>* ptr)
 }
 
 template <class T>
-char ArvoreAVL<T>::*toString()
+char* ArvoreAVL<T>::toString()
 {
-    char buffer* ret = new char[100];
-    strc
+
+
 
 }
+
+template <class T>
+char* ArvoreAVL<T>::toString(No*<T> ptr, char* buff)
+{
+
+
+
+}
+
 
 
 template <class T>
@@ -152,6 +161,10 @@ T ArvoreAVL<T>::getMenor(No<T>* ptr)
 
     return anterior->getInfo();
 }
+
+
+
+
 
 
 

@@ -49,34 +49,41 @@
 	"No.h"
 	<iostream>
 
-1537193242 source:c:\users\u16174\desktop\github\arvoreavl\parvoresavl\main.cpp
+1537367565 source:c:\users\u16174\desktop\github\arvoreavl\parvoresavl\main.cpp
 	<iostream>
 	"ArvoreAVL.h"
 	"No.h"
 
-1537194347 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\include\arvoreavl.h
+1537364043 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\include\arvoreavl.h
 	"No.h"
 	<iostream>
 	"../src/ArvoreAVL.cpp"
 
-1537192342 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\include\no.h
+1537367469 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\include\no.h
+	<iostream>
 	"../src/No.cpp"
 
-1537194486 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\no.cpp
+1537367793 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\no.cpp
 	"No.h"
 	<iostream>
+	<string.h>
+	<stdio.h>
 
-1537195279 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
+1537367565 c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
 	"ArvoreAVL.h"
 	<iostream>
+	<string.h>
 
-1537194486 source:c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\no.cpp
+1537367650 source:c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\no.cpp
 	"No.h"
 	<iostream>
+	<string.h>
+	<stdio.h>
 
-1537194647 source:c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
+1537367565 source:c:\users\u16174\desktop\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
 	"ArvoreAVL.h"
 	<iostream>
+	<string.h>
 
 1537281192 c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\no.cpp
 	"No.h"
