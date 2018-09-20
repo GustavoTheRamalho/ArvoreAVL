@@ -13,6 +13,7 @@ No<T>::No(T info)
     this->info = info;
     this->esquerda = NULL;
     this->direita = NULL;
+    this->equilibrio = 0;
 }
 
 template <class T>
@@ -105,7 +106,7 @@ char* No<T>::toString()
 {
     char* ret = new char[10];
     strcpy(ret, "");
-    sprintf(ret, "%d", this->info);
+    sprintf(ret, "%d", this->equilibrio);
     return ret;
 }
 

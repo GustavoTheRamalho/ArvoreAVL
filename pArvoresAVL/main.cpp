@@ -7,22 +7,27 @@ using namespace std;
 
 int main()
 {
-    /*ArvoreAVL<int> *arv = new ArvoreAVL<int>();
+    ArvoreAVL<int> *arv = new ArvoreAVL<int>();
 
 
-    arv->incluir(2);
-    arv->incluir(1);
-    arv->incluir(3);
+
     arv->incluir(4);
-    arv->remover(2);
+    arv->incluir(3);
+    arv->incluir(1);
+    //arv->incluir(2);
+    //arv->incluir(5);
+    //arv->test();
 
 
-    cout << arv->altura() << endl;*/
-    No<int> *no = new No<int>(2);
+
+
+
+    cout << '\n' << arv->toString() << endl;
 
 
 
 
-    cout << no->toString() << endl;
+
+
     return 0;
 }

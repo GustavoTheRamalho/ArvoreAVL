@@ -14,6 +14,7 @@ class ArvoreAVL
         void remover(T);
         int altura();
         char* toString();
+        void test();
 
 
 
@@ -27,10 +28,20 @@ class ArvoreAVL
         T getMaior(No<T> *ptr);
         T getMenor(No<T> *ptr);
 
-        char* toString(No<T>*);
+        void calcEquilibrio(No<T>* ptr);
 
-
+        void printaNo(No<T>*, char*);
         No<T>* raiz;
+
+        int estaBalanceada();
+
+        void rotacionarEsq(No<T>* ,No<T>*);
+        void rotacionarDir(No<T>* ,No<T>*);
+        void rotacionarDuplaEsq(No<T>* ,No<T>*);
+        void rotacionarDuplaDir(No<T>* ,No<T>*);
+
+        void balancear(No<T>* ptr);
+
 
 
 };
