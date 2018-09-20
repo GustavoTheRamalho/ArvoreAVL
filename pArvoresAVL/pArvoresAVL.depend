@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1537448496 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\main.cpp
+1537451662 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\main.cpp
 	<iostream>
 	"ArvoreAVL.h"
 	"No.h"
 
-1537448778 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
+1537452031 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
 	"ArvoreAVL.h"
 	<iostream>
 	<string.h>
 
-1537448274 c:\users\u16174\documents\github\arvoreavl\parvoresavl\include\arvoreavl.h
+1537451917 c:\users\u16174\documents\github\arvoreavl\parvoresavl\include\arvoreavl.h
 	"No.h"
 	<iostream>
 	"../src/ArvoreAVL.cpp"
@@ -18,7 +18,7 @@
 	<iostream>
 	"../src/No.cpp"
 
-1537448648 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\no.cpp
+1537452048 source:c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\no.cpp
 	"No.h"
 	<iostream>
 	<string.h>
@@ -96,13 +96,13 @@
 	<iostream>
 	<string.h>
 
-1537448648 c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\no.cpp
+1537452048 c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\no.cpp
 	"No.h"
 	<iostream>
 	<string.h>
 	<stdio.h>
 
-1537448778 c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
+1537452031 c:\users\u16174\documents\github\arvoreavl\parvoresavl\src\arvoreavl.cpp
 	"ArvoreAVL.h"
 	<iostream>
 	<string.h>

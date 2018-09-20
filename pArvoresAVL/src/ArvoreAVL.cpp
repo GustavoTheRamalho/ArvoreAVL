@@ -9,6 +9,7 @@ template <class T>
 ArvoreAVL<T>::ArvoreAVL()
 {
     this->raiz = NULL;
+
 }
 
 template <class T>
@@ -39,12 +40,12 @@ void ArvoreAVL<T>::incluir(T info)
     }
 
     calcEquilibrio(this->raiz);
-
-    if (this->estaBalanceada())
+/*
+    if (this->estaBalanceada(this->raiz))
     {
         this->balancear(this->raiz);
         calcEquilibrio(this->raiz);
-    }
+    }*/
 
 }
 
@@ -256,6 +257,7 @@ void ArvoreAVL<T>::calcEquilibrio(No<T>* ptr)
     if (ptr->getEsq() != NULL)
         calcEquilibrio(ptr->getEsq());
 
+
     ptr->setEquilibrio(this->altura(ptr->getDir()) - altura(ptr->getEsq()));
 
     if (ptr->getDir() != NULL)
@@ -267,7 +269,12 @@ void ArvoreAVL<T>::test()
 {
     //calcEquilibrio(this->raiz);
     //rotacionarEsq(this->raiz, NULL);
-    balancear(this->raiz);
+  //  balancear(this->raiz);
+
+    if (estaBalanceada(this->raiz))
+        printf("balancead\n");
+    else
+        printf("n\n");
     calcEquilibrio(this->raiz);
 }
 
@@ -275,6 +282,7 @@ void ArvoreAVL<T>::test()
 template <class T>
 void ArvoreAVL<T>::balancear(No<T>* ptr)
 {
+
     if (ptr->getEquilibrio() > 1)
         if (ptr->getDir()->getEquilibrio() < 0)
             rotacionarDuplaEsq(ptr, NULL);
@@ -342,7 +350,22 @@ void ArvoreAVL<T>::rotacionarDuplaDir(No<T>* ptr, No<T>* ant)
 template <class T>
 int ArvoreAVL<T>::estaBalanceada()
 {
-    return this->raiz->estaEquilibrado();
+    //return estaBalanceada(this->raiz);
+
+
+}
+
+template <class T>
+int ArvoreAVL<T>::estaBalanceada(No<T>* ptr)
+{
+    if (ptr == NULL)
+        return 1;
+
+    int esq = estaBalanceada(ptr->getEsq());
+    int atual = ptr->estaEquilibrado();
+    int dir = estaBalanceada(ptr->getDir());
+
+    return esq && atual && dir;
 }
 
 

@@ -11,17 +11,18 @@ int main()
 
 
 
-    arv->incluir(1);
     arv->incluir(2);
+    arv->test();
     arv->incluir(3);
+    arv->test();
+    arv->incluir(1);
+    arv->test();
     arv->incluir(4);
-    arv->incluir(7);
-    arv->incluir(8);
-    arv->incluir(10);
-    arv->incluir(6);
+    arv->test();
     arv->incluir(0);
-    arv->remover(10);
-    //arv->test();
+    arv->test();
+    arv->incluir(-1);
+    arv->test();
 
 
 

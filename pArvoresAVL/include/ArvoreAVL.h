@@ -24,6 +24,7 @@ class ArvoreAVL
     private:
         void incluir(T, No<T>*, No<T>*);
         int altura(No<T>*);
+
         No<T> *menorDaDireita();
 
         T getMaior(No<T> *ptr);
@@ -34,7 +35,9 @@ class ArvoreAVL
 
         No<T>* raiz;
 
+
         int estaBalanceada();
+        int estaBalanceada(No<T>*);
 
         void calcEquilibrio(No<T>* ptr);
         void rotacionarEsq(No<T>* ,No<T>*);
