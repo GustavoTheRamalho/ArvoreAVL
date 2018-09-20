@@ -11,18 +11,23 @@ int main()
 
 
 
-    arv->incluir(4);
-    arv->incluir(3);
     arv->incluir(1);
-    //arv->incluir(2);
-    //arv->incluir(5);
+    arv->incluir(2);
+    arv->incluir(3);
+    arv->incluir(4);
+    arv->incluir(7);
+    arv->incluir(8);
+    arv->incluir(10);
+    arv->incluir(6);
+    arv->incluir(0);
+    arv->remover(10);
     //arv->test();
 
 
 
 
 
-    cout << '\n' << arv->toString() << endl;
+    cout << '\n' << arv->toStringPorNvl() << endl;
 
 
 

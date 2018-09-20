@@ -91,7 +91,7 @@ void No<T>::setEquilibrio(int e)
 template <class T>
 int No<T>::estaEquilibrado()
 {
-    return this->equilibrio >= -1 && this->equilibrio <= 1;
+    return this->equilibrio >= -1 || this->equilibrio <= 1;
 }
 
 
@@ -106,7 +106,7 @@ char* No<T>::toString()
 {
     char* ret = new char[10];
     strcpy(ret, "");
-    sprintf(ret, "%d", this->equilibrio);
+    sprintf(ret, "%d", this->info);
     return ret;
 }
 

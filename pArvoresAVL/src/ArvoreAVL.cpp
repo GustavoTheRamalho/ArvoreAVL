@@ -40,7 +40,7 @@ void ArvoreAVL<T>::incluir(T info)
 
     calcEquilibrio(this->raiz);
 
-    if (this->raiz->getEquilibrio() < -1 || this->raiz->getEquilibrio() > 1)
+    if (this->estaBalanceada())
     {
         this->balancear(this->raiz);
         calcEquilibrio(this->raiz);
@@ -79,6 +79,15 @@ void ArvoreAVL<T>::remover(T info)
             anterior->setDir(NULL);
 
         delete atual;
+
+        calcEquilibrio(this->raiz);
+
+        if (this->estaBalanceada())
+        {
+            this->balancear(this->raiz);
+            calcEquilibrio(this->raiz);
+        }
+
     }
     else
     {
@@ -97,8 +106,6 @@ void ArvoreAVL<T>::remover(T info)
             this->remover(menor);
             atual->setInfo(menor);
         }
-
-
     }
 }
 
@@ -144,6 +151,7 @@ void ArvoreAVL<T>::printaNo(No<T>* ptr, char* buff)
     if (ptr->getEsq() != NULL)
         strcat(buff, "(");
 
+
     this->printaNo(ptr->getEsq(), buff);
 
     strcat(buff, ptr->toString());
@@ -155,6 +163,54 @@ void ArvoreAVL<T>::printaNo(No<T>* ptr, char* buff)
     if (ptr->ehFolha())
         strcat(buff, ")");
 
+}
+
+
+
+
+
+template <class T>
+char* ArvoreAVL<T>::toStringPorNvl()
+{
+    int tam = altura(this->raiz);
+
+    char** buff = new char*[tam];
+    for (int i=0; i < tam; i++)
+    {
+        buff[i] = new char[100];
+        strcpy(buff[i], "");
+    }
+
+    this->printaPorNvl(this->raiz, buff, 0);
+
+    char* ret = new char[tam*100];
+    strcpy(ret, "");
+
+    for (int i=0; i<tam; i++)
+    {
+        strcat(ret, buff[i]);
+        strcat(ret, "\n");
+    }
+
+    return ret;
+
+
+}
+
+template <class T>
+void ArvoreAVL<T>::printaPorNvl(No<T>* ptr, char** buff, int nvl)
+{
+    if (ptr == NULL)
+        return;
+
+    printaPorNvl(ptr->getEsq(), buff, nvl+1);
+    if (ptr == this->raiz)
+        strcat(buff[nvl], "   ");
+    strcat(buff[nvl], ptr->toString());
+    strcat(buff[nvl], "     ");
+
+
+    printaPorNvl(ptr->getDir(), buff, nvl+1);
 }
 
 
@@ -282,6 +338,16 @@ void ArvoreAVL<T>::rotacionarDuplaDir(No<T>* ptr, No<T>* ant)
     rotacionarEsq(ptr->getEsq(), ptr);
     rotacionarDir(ptr, ant);
 }
+
+template <class T>
+int ArvoreAVL<T>::estaBalanceada()
+{
+    return this->raiz->estaEquilibrado();
+}
+
+
+
+
 
 
 
