@@ -35,17 +35,14 @@ class ArvoreAVL
 
         No<T>* raiz;
 
-
-        int estaBalanceada();
-        int estaBalanceada(No<T>*);
-
         void calcEquilibrio(No<T>* ptr);
         void rotacionarEsq(No<T>* ,No<T>*);
         void rotacionarDir(No<T>* ,No<T>*);
         void rotacionarDuplaEsq(No<T>* ,No<T>*);
         void rotacionarDuplaDir(No<T>* ,No<T>*);
 
-        void balancear(No<T>* ptr);
+        void balancear();
+        void balancear(No<T>* ptr, No<T>* ant);
 
 
 

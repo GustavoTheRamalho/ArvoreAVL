@@ -107,3 +107,39 @@
 	<iostream>
 	<string.h>
 
+1538251676 source:c:\users\carlos ramalho\desktop\repositorio temporario\arvoreavl\parvoresavl\main.cpp
+	<iostream>
+	"ArvoreAVL.h"
+	"No.h"
+
+1538251314 c:\users\carlos ramalho\desktop\repositorio temporario\arvoreavl\parvoresavl\include\arvoreavl.h
+	"No.h"
+	<iostream>
+	"../src/ArvoreAVL.cpp"
+
+1538250276 c:\users\carlos ramalho\desktop\repositorio temporario\arvoreavl\parvoresavl\include\no.h
+	<iostream>
+	"../src/No.cpp"
+
+1538251748 c:\users\carlos ramalho\desktop\repositorio temporario\arvoreavl\parvoresavl\src\no.cpp
+	"No.h"
+	<iostream>
+	<string.h>
+	<stdio.h>
+
+1538251547 c:\users\carlos ramalho\desktop\repositorio temporario\arvoreavl\parvoresavl\src\arvoreavl.cpp
+	"ArvoreAVL.h"
+	<iostream>
+	<string.h>
+
+1538251547 source:c:\users\carlos ramalho\desktop\repositorio temporario\arvoreavl\parvoresavl\src\arvoreavl.cpp
+	"ArvoreAVL.h"
+	<iostream>
+	<string.h>
+
+1538251748 source:c:\users\carlos ramalho\desktop\repositorio temporario\arvoreavl\parvoresavl\src\no.cpp
+	"No.h"
+	<iostream>
+	<string.h>
+	<stdio.h>
+

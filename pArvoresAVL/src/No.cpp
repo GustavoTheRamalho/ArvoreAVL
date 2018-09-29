@@ -106,7 +106,7 @@ char* No<T>::toString()
 {
     char* ret = new char[10];
     strcpy(ret, "");
-    sprintf(ret, "%d", this->equilibrio);
+    sprintf(ret, "%d", this->info);
     return ret;
 }
 
